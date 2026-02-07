@@ -23,7 +23,7 @@ pub async fn create_ticket(Json(payload): Json<Value>) -> (StatusCode, Json<Valu
     (
         StatusCode::CREATED,
         Json(json!({
-            "id": "TIK001",
+            "id": "HLA1",
             "message": "Ticket created successfully"
         })),
     )
