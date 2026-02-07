@@ -1,0 +1,17 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    uses: mmuhlariholdings/hlavi-workflows/.github/workflows/rust-release-binary.yml@main
+    with:
+      binary-name: 'hlavi-api'
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
