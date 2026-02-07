@@ -14,13 +14,13 @@ name = "hlavi-api"
 path = "src/main.rs"
 
 [dependencies]
-# Core library
-# hlavi-core = { git = "https://github.com/mmuhlariholdings/hlavi-core" }
-hlavi-core = { path = "../hlavi-core" }
+# Core library - using git dependency with branch for version control
+# Update to tag when a stable version is released
+hlavi-core = { git = "https://github.com/mmuhlariholdings/hlavi-core", branch = "main" }
 
-# Agent library
-# hlavi-agent = { git = "https://github.com/mmuhlariholdings/hlavi-agent" }
-hlavi-agent = { path = "../hlavi-agent" }
+# Agent library - using git dependency with branch for version control
+# Update to tag when a stable version is released
+hlavi-agent = { git = "https://github.com/mmuhlariholdings/hlavi-agent", branch = "main" }
 
 # Web framework
 axum = "0.7"
