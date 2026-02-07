@@ -3,12 +3,14 @@
 
 use serde::{Deserialize, Serialize};
 
+#[allow(dead_code)]
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateTicketRequest {
     pub title: String,
     pub description: Option<String>,
 }
 
+#[allow(dead_code)]
 #[derive(Debug, Serialize, Deserialize)]
 pub struct UpdateTicketRequest {
     pub title: Option<String>,
@@ -16,6 +18,7 @@ pub struct UpdateTicketRequest {
     pub status: Option<String>,
 }
 
+#[allow(dead_code)]
 #[derive(Debug, Serialize, Deserialize)]
 pub struct TicketResponse {
     pub id: String,
@@ -27,6 +30,7 @@ pub struct TicketResponse {
     pub updated_at: String,
 }
 
+#[allow(dead_code)]
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AcceptanceCriteriaResponse {
     pub id: usize,
@@ -34,6 +38,7 @@ pub struct AcceptanceCriteriaResponse {
     pub completed: bool,
 }
 
+#[allow(dead_code)]
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ErrorResponse {
     pub error: String,
