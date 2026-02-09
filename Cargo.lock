@@ -529,14 +529,14 @@ dependencies = [
 
 [[package]]
 name = "hlavi-api"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "anyhow",
  "axum",
  "config",
  "dotenvy",
  "hlavi-agent",
- "hlavi-core 0.1.9",
+ "hlavi-core 0.1.14",
  "hyper 1.8.1",
  "serde",
  "serde_json",
@@ -566,8 +566,8 @@ dependencies = [
 
 [[package]]
 name = "hlavi-core"
-version = "0.1.9"
-source = "git+https://github.com/mmuhlariholdings/hlavi-core?tag=v0.1.9#7ad90c7a3922f04cf6da040fb78b4d43f25b211f"
+version = "0.1.14"
+source = "git+https://github.com/mmuhlariholdings/hlavi-core?tag=v0.1.14#f89ba6d808c540b08464d603901a58dcf44f256c"
 dependencies = [
  "anyhow",
  "async-trait",
