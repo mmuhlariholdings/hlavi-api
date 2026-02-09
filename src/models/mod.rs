@@ -8,6 +8,8 @@ use serde::{Deserialize, Serialize};
 pub struct CreateTicketRequest {
     pub title: String,
     pub description: Option<String>,
+    pub start_date: Option<String>,
+    pub end_date: Option<String>,
 }
 
 #[allow(dead_code)]
@@ -16,6 +18,8 @@ pub struct UpdateTicketRequest {
     pub title: Option<String>,
     pub description: Option<String>,
     pub status: Option<String>,
+    pub start_date: Option<String>,
+    pub end_date: Option<String>,
 }
 
 #[allow(dead_code)]
@@ -28,6 +32,8 @@ pub struct TicketResponse {
     pub acceptance_criteria: Vec<AcceptanceCriteriaResponse>,
     pub created_at: String,
     pub updated_at: String,
+    pub start_date: Option<String>,
+    pub end_date: Option<String>,
 }
 
 #[allow(dead_code)]
