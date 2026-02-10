@@ -1,3 +1,3 @@
 pub mod board;
 pub mod health;
-pub mod tickets;
+pub mod tasks;

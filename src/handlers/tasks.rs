@@ -2,7 +2,7 @@ use axum::{extract::Path, http::StatusCode, Json};
 use serde_json::{json, Value};
 
 /// List all tickets
-pub async fn list_tickets() -> (StatusCode, Json<Value>) {
+pub async fn list_tasks() -> (StatusCode, Json<Value>) {
     // TODO: Implement with storage backend
     (
         StatusCode::OK,
@@ -13,7 +13,7 @@ pub async fn list_tickets() -> (StatusCode, Json<Value>) {
 }
 
 /// Create a new ticket
-pub async fn create_ticket(Json(payload): Json<Value>) -> (StatusCode, Json<Value>) {
+pub async fn create_task(Json(payload): Json<Value>) -> (StatusCode, Json<Value>) {
     // TODO: Implement ticket creation
     tracing::info!("Creating ticket: {:?}", payload);
     (
@@ -26,7 +26,7 @@ pub async fn create_ticket(Json(payload): Json<Value>) -> (StatusCode, Json<Valu
 }
 
 /// Get a single ticket by ID
-pub async fn get_ticket(Path(id): Path<String>) -> (StatusCode, Json<Value>) {
+pub async fn get_task(Path(id): Path<String>) -> (StatusCode, Json<Value>) {
     // TODO: Implement ticket retrieval
     tracing::info!("Getting ticket: {}", id);
     (
@@ -40,7 +40,7 @@ pub async fn get_ticket(Path(id): Path<String>) -> (StatusCode, Json<Value>) {
 }
 
 /// Update a ticket
-pub async fn update_ticket(
+pub async fn update_task(
     Path(id): Path<String>,
     Json(payload): Json<Value>,
 ) -> (StatusCode, Json<Value>) {
@@ -56,7 +56,7 @@ pub async fn update_ticket(
 }
 
 /// Delete a ticket
-pub async fn delete_ticket(Path(id): Path<String>) -> StatusCode {
+pub async fn delete_task(Path(id): Path<String>) -> StatusCode {
     // TODO: Implement ticket deletion
     tracing::info!("Deleting ticket: {}", id);
     StatusCode::NO_CONTENT

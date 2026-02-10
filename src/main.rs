@@ -30,19 +30,23 @@ async fn main() -> anyhow::Result<()> {
     let app = Router::new()
         .route("/", get(handlers::health::health_check))
         .route("/health", get(handlers::health::health_check))
-        .route("/api/v1/tickets", get(handlers::tickets::list_tickets))
-        .route("/api/v1/tickets", post(handlers::tickets::create_ticket))
+        .route("/api/v1/tasks", get(handlers::tasks::list_tasks))
+        .route("/api/v1/tasks", post(handlers::tasks::create_task))
         .route(
-            "/api/v1/tickets/:id",
-            get(handlers::tickets::get_ticket)
-                .put(handlers::tickets::update_ticket)
-                .delete(handlers::tickets::delete_ticket),
+            "/api/v1/tasks/:id",
+            get(handlers::tasks::get_task)
+                .put(handlers::tasks::update_task)
+                .delete(handlers::tasks::delete_task),
         )
         .route("/api/v1/board", get(handlers::board::get_board))
         .layer(cors);
 
-    // Start the server
-    let addr = SocketAddr::from(([0, 0, 0, 0], 3000));
+    // Start the server - read port from environment or default to 3000
+    let port = std::env::var("PORT")
+        .ok()
+        .and_then(|p| p.parse().ok())
+        .unwrap_or(3000);
+    let addr = SocketAddr::from(([0, 0, 0, 0], port));
     tracing::info!("Hlavi API server listening on {}", addr);
 
     let listener = tokio::net::TcpListener::bind(addr).await?;

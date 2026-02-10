@@ -37,11 +37,11 @@ The API server will start on `http://localhost:3000`
 ### API Endpoints
 
 - `GET /health` - Health check
-- `GET /api/v1/tickets` - List all tickets
-- `POST /api/v1/tickets` - Create a new ticket
-- `GET /api/v1/tickets/:id` - Get ticket by ID
-- `PUT /api/v1/tickets/:id` - Update a ticket
-- `DELETE /api/v1/tickets/:id` - Delete a ticket
+- `GET /api/v1/tasks` - List all tasks
+- `POST /api/v1/tasks` - Create a new task
+- `GET /api/v1/tasks/:id` - Get task by ID
+- `PUT /api/v1/tasks/:id` - Update a task
+- `DELETE /api/v1/tasks/:id` - Delete a task
 - `GET /api/v1/board` - Get board configuration
 
 ## Development
