@@ -511,13 +511,13 @@ dependencies = [
 
 [[package]]
 name = "hlavi-agent"
-version = "0.1.0"
-source = "git+https://github.com/mmuhlariholdings/hlavi-agent?branch=main#c54e8bfae9735aba689fe145b54b5821821a3e7f"
+version = "0.1.6"
+source = "git+https://github.com/mmuhlariholdings/hlavi-agent?tag=v0.1.6#19f074a9162d7b7cc1db40d23a6b251f7e6b5503"
 dependencies = [
  "anyhow",
  "async-trait",
  "config",
- "hlavi-core 0.1.1",
+ "hlavi-core 0.1.14",
  "reqwest",
  "serde",
  "serde_json",
@@ -536,7 +536,7 @@ dependencies = [
  "config",
  "dotenvy",
  "hlavi-agent",
- "hlavi-core 0.1.16",
+ "hlavi-core 0.1.18",
  "hyper 1.8.1",
  "serde",
  "serde_json",
@@ -551,8 +551,8 @@ dependencies = [
 
 [[package]]
 name = "hlavi-core"
-version = "0.1.1"
-source = "git+https://github.com/mmuhlariholdings/hlavi-core?branch=main#12782d1c2a6a38bc5a542d80de594c7de0dda6e5"
+version = "0.1.14"
+source = "git+https://github.com/mmuhlariholdings/hlavi-core?tag=v0.1.14#f89ba6d808c540b08464d603901a58dcf44f256c"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -566,8 +566,8 @@ dependencies = [
 
 [[package]]
 name = "hlavi-core"
-version = "0.1.16"
-source = "git+https://github.com/mmuhlariholdings/hlavi-core?tag=v0.1.16#e38cfc6831563558867ccd4e99c1e72d52db9006"
+version = "0.1.18"
+source = "git+https://github.com/mmuhlariholdings/hlavi-core?tag=v0.1.18#7ce99d00450f108ac6116bc758d88aa6303a71ea"
 dependencies = [
  "anyhow",
  "async-trait",
