@@ -20,6 +20,7 @@ pub struct UpdateTicketRequest {
     pub status: Option<String>,
     pub start_date: Option<String>,
     pub end_date: Option<String>,
+    pub parent: Option<String>,
     pub blocks: Option<Vec<String>>,
 }
 
@@ -35,6 +36,8 @@ pub struct TicketResponse {
     pub updated_at: String,
     pub start_date: Option<String>,
     pub end_date: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub parent: Option<String>,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub blocks: Vec<String>,
 }
@@ -53,3 +56,4 @@ pub struct ErrorResponse {
     pub error: String,
     pub message: String,
 }
+
