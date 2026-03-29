@@ -22,6 +22,7 @@ pub struct UpdateTicketRequest {
     pub end_date: Option<String>,
     pub parent: Option<String>,
     pub blocks: Option<Vec<String>>,
+    pub rank: Option<i64>,
 }
 
 #[allow(dead_code)]
@@ -40,6 +41,12 @@ pub struct TicketResponse {
     pub parent: Option<String>,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub blocks: Vec<String>,
+    #[serde(default, skip_serializing_if = "is_zero_i64")]
+    pub rank: i64,
+}
+
+fn is_zero_i64(n: &i64) -> bool {
+    *n == 0
 }
 
 #[allow(dead_code)]
