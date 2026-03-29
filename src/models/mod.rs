@@ -56,4 +56,3 @@ pub struct ErrorResponse {
     pub error: String,
     pub message: String,
 }
-
