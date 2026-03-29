@@ -20,6 +20,7 @@ pub struct UpdateTicketRequest {
     pub status: Option<String>,
     pub start_date: Option<String>,
     pub end_date: Option<String>,
+    pub blocks: Option<Vec<String>>,
 }
 
 #[allow(dead_code)]
@@ -34,6 +35,8 @@ pub struct TicketResponse {
     pub updated_at: String,
     pub start_date: Option<String>,
     pub end_date: Option<String>,
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub blocks: Vec<String>,
 }
 
 #[allow(dead_code)]

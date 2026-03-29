@@ -1,6 +1,6 @@
 [package]
 name = "hlavi-api"
-version = "0.1.4"
+version = "0.1.5"
 edition = "2021"
 authors = ["M Muhlari Holdings (Pty) Ltd"]
 license = "MIT OR Apache-2.0"
@@ -16,11 +16,11 @@ path = "src/main.rs"
 [dependencies]
 # Core library - using git dependency with tag for version control
 # Update to tag when a new version is released
-hlavi-core = { git = "https://github.com/mmuhlariholdings/hlavi-core", tag = "v0.1.16" }
+hlavi-core = { git = "https://github.com/mmuhlariholdings/hlavi-core", tag = "v0.1.19" }
 
 # Agent library - using git dependency with branch for version control
 # Update to tag when a stable version is released
-hlavi-agent = { git = "https://github.com/mmuhlariholdings/hlavi-agent", branch = "main" }
+hlavi-agent = { git = "https://github.com/mmuhlariholdings/hlavi-agent", tag = "v0.1.7" }
 
 # Web framework
 axum = "0.7"
