@@ -16,11 +16,11 @@ path = "src/main.rs"
 [dependencies]
 # Core library - using git dependency with tag for version control
 # Update to tag when a new version is released
-hlavi-core = { git = "https://github.com/mmuhlariholdings/hlavi-core", tag = "v0.5.0" }
+hlavi-core = { git = "https://github.com/mmuhlariholdings/hlavi-core", tag = "v0.6.0" }
 
 # Agent library - using git dependency with branch for version control
 # Update to tag when a stable version is released
-hlavi-agent = { git = "https://github.com/mmuhlariholdings/hlavi-agent", tag = "v0.1.8" }
+hlavi-agent = { git = "https://github.com/mmuhlariholdings/hlavi-agent", tag = "v0.1.9" }
 
 # Web framework
 axum = "0.7"
